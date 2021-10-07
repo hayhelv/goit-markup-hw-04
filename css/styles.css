@@ -13,7 +13,7 @@
     --color-accent: #2196F3;
 /* цвет текста футер*/
     --color-adress: rgba(255, 255, 255, 0.6);
-
+    --color-meseng: #AFB1B8;
 
 }
 body {
@@ -107,15 +107,29 @@ h1,h2,h3,h4,h5,h6,p,ul {
 .contacts {
     display: flex;
     margin-left: auto;
+    align-items: center;
     
 }
 
+.contact {
+    display: flex;
+    align-items: center;    
+    color: var(--main-color-text); 
+}
+.contact:hover, 
+.contacts:focus {
+    color: var(--color-accent);
+}
+
+.icon-mail {
+    margin-right: 10px;
+    fill: currentColor;
+}
 .contacts .item + .item {
     margin-left: 50px;
 }
 
 .contacts .contact {
-    color: var(--main-color-text);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -123,11 +137,6 @@ h1,h2,h3,h4,h5,h6,p,ul {
     text-decoration: none;
 }
 
-
-.contacts :hover,
-.contacts :focus {
-    color: var(--color-accent);
-}
 /*main
 
 */
@@ -196,9 +205,17 @@ h1,h2,h3,h4,h5,h6,p,ul {
  }
 
  .advantage-list {  
-    max-width: 270px;
-    
+    max-width: 270px; 
  }
+
+.advantage-icon {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background: var(--secondary-color-bg);
+}
+
 
 .advantage-title {
     
@@ -247,23 +264,29 @@ h1,h2,h3,h4,h5,h6,p,ul {
 }
 .team-items {
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
+}
+.teams {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-title {
     margin-bottom: 50px;
 
     color: var(--secondary-color-text);
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.03em;
 }
-.teams {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.team-list {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
 }
+
 .team-subtitle {
     margin-bottom: 10px;
     color: var(--secondary-color-text);
@@ -277,6 +300,70 @@ h1,h2,h3,h4,h5,h6,p,ul {
     line-height: 1.2;
     letter-spacing: 0.03em;
 }
+.meseng {
+    margin-top: 16px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: var(--color-meseng);
+}
+.meseng:hover,
+.meseng:focus {
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    color: var(--main-color-bg);
+}
+
+.icon-meseng {
+    fill: currentColor; 
+}
+.meseng + .meseng {
+    margin-left: 10px;
+}
+
+/* Клиенты */
+.clients-title {
+    margin-bottom: 50px;
+    color: var(--secondary-color-text);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.clients-list {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients-item {
+    width: 170px;
+    height: 92px;
+    
+}
+.clients-item + .clients-item {
+    margin-left: 30px;
+}
+.clients-link {
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+    border: 1px solid var(--color-meseng);
+    color: var(--color-meseng);
+    border-radius: 4px;
+}
+.clients-link:hover {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+.icon-clients {
+    fill: currentColor;
+}
+
+
 /* Портфолио
 
 */
@@ -285,9 +372,7 @@ h1,h2,h3,h4,h5,h6,p,ul {
 
 */
 .portfolio {
-    
     text-align: center;
-    
 }
 
 .portfolio-filter {
@@ -319,7 +404,11 @@ h1,h2,h3,h4,h5,h6,p,ul {
 .portfolio-filter .btn.current{
     color: var(--main-color-bg);
     background-color: var(--color-accent);
+    }
+.portfolio-filter .item:hover,
+.portfolio-filter .item:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 .portfolio-choice {
@@ -333,6 +422,10 @@ h1,h2,h3,h4,h5,h6,p,ul {
     margin: 15px;
     border: 1px solid #EEEEEE;
     text-align: left;
+}
+.portfolio-choice .item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 .choich {
     padding: 20px 24px;
@@ -354,10 +447,22 @@ h1,h2,h3,h4,h5,h6,p,ul {
 
 */
 .footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    /* display: flex; */
+
+    
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--bg-color-foot);
 }
+.footer-column {
+    display: flex;
+    
+    
+}
+
 .footer-logo {
     font-family: 'Raleway', sans-serif;
     color: var(--main-color-bg);
@@ -399,4 +504,50 @@ h1,h2,h3,h4,h5,h6,p,ul {
 .footer-nav :hover,
 .footer-nav :focus {
     color: var(--color-accent);
+}
+.folov {
+    margin-left: 70px; 
+    
+}
+
+.folov-title {
+    
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--main-color-bg);
+}
+.folov-list {
+    color: var(--main-color-bg);
+}
+.folov-item {
+    margin-top: 20px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+     
+}
+.folov-link {
+    color: var(--main-color-bg);
+    padding: 12px;
+}
+
+.icon-footer {
+   fill: currentColor; 
+   
+}
+
+.folov-item:hover,
+.folov-item:focus {
+    background-color: var(--color-accent); 
+}
+
+.folov-item + .folov-item {
+    margin-left: 10px;
 }
