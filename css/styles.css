@@ -117,7 +117,7 @@ h1,h2,h3,h4,h5,h6,p,ul {
     color: var(--main-color-text); 
 }
 .contact:hover, 
-.contacts:focus {
+.contact:focus {
     color: var(--color-accent);
 }
 
@@ -355,7 +355,8 @@ h1,h2,h3,h4,h5,h6,p,ul {
     color: var(--color-meseng);
     border-radius: 4px;
 }
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus  {
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
 }
@@ -405,8 +406,8 @@ h1,h2,h3,h4,h5,h6,p,ul {
     color: var(--main-color-bg);
     background-color: var(--color-accent);
     }
-.portfolio-filter .item:hover,
-.portfolio-filter .item:focus {
+.portfolio-filter .btn:hover,
+.portfolio-filter .btn:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 }
@@ -543,9 +544,11 @@ color: var(--main-color-bg);
    
 }
 
-.folov-item:hover,
-.folov-item:focus {
+.folov-link:hover,
+.folov-link:focus {
     background-color: var(--color-accent); 
+    border-radius: 50%;
+    
 }
 
 .folov-item + .folov-item {
